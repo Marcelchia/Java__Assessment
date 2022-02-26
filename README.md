@@ -8,8 +8,7 @@ This project is feasible and allows me to see the application to real working wo
 
 Q)What did you struggle with in this project?
 
-Alot of time is spent on showing student summary and passed course option as I was trying to figure out the linkages and how to access different Hashmaps. 
-Spent alot of time on the date error as initially the input allowed invalid months and dates to be keyed while it is in the correct date parsein format eg: 50/50/5050 , thankfully that is also corrected eventually with google search. However, I may have to do some reading up on inheritance and interface.
+Did not really struggle with this assessment as much as compared to JS assessment, but did spent some time on Student Summary and Date Validation. I needed to change the data type attribute for date to validation the string pattern format of date properly. 
 
 
 Q)What would make your experience with this assessment better?
