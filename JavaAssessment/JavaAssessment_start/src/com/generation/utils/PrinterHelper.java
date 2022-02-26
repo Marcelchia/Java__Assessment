@@ -42,22 +42,26 @@ public class PrinterHelper
 
 		boolean isWrong = true;
 		Scanner sc = new Scanner(System.in);
-		String birthDate;
+		String birthDate = null;
 
 
 		do {
-			System.out.println("Please enter date in dd/mm/yyyy format");
-			birthDate = sc.next();
-			if (checkDate(birthDate)) {
-				DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-				dateFormat.setLenient(false);
-				try {
+			try {
+				System.out.println("Please enter date in dd/mm/yyyy format");
+				birthDate = sc.next();
+				if (checkDate(birthDate)) {
+					DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+					dateFormat.setLenient(false);
 					dateFormat.parse(birthDate);
 					isWrong = false;
-				} catch (Exception e) {
-					System.out.println("Enter the date in the correct dd/mm/yyyy format");
+				} else {
+					System.out.println("Date does not exist !! ");
 				}
-			}
+			} //try
+			catch (Exception e) {
+					System.out.println("Date does not exist !!");
+				} //catch
+
 		} while (isWrong);
 
 
