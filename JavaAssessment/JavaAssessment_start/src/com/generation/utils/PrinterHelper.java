@@ -5,7 +5,6 @@ import com.generation.model.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class PrinterHelper
@@ -29,36 +28,55 @@ public class PrinterHelper
 	}
 
 	public static Student createStudentMenu(Scanner scanner )
-		throws ParseException
-	{
-		System.out.println( "|-------------------------------------|" );
-		System.out.println( "| . 1 Register Student                |" );
-		System.out.println( "|-------------------------------------|" );
-		System.out.println( "| Enter student name:                 |" );
+		throws ParseException {
+		System.out.println("|-------------------------------------|");
+		System.out.println("| . 1 Register Student                |");
+		System.out.println("|-------------------------------------|");
+		System.out.println("| Enter student name:                 |");
 		String name = scanner.next();
-		System.out.println( "| Enter student ID:                   |" );
+		System.out.println("| Enter student ID:                   |");
 		String id = scanner.next();
-		System.out.println( "| Enter student email:                |" );
+		System.out.println("| Enter student email:                |");
 		String email = scanner.next();
 
-		DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
-		//TODO validate date format and catch exception to avoid crash
-		Date birthDate = null;
+
 		boolean isWrong = true;
-		while(isWrong) {
-			try {
-				System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
-				birthDate = formatter.parse(scanner.next());
-				isWrong = false;
-			} catch (Exception e) {
-				System.out.println("Please re-key the correct date format as mm/dd/yyyy");
+		Scanner sc = new Scanner(System.in);
+		String birthDate;
+
+
+		do {
+			System.out.println("Please enter date in dd/mm/yyyy format");
+			birthDate = sc.next();
+			if (checkDate(birthDate)) {
+				DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+				dateFormat.setLenient(false);
+				try {
+					dateFormat.parse(birthDate);
+					isWrong = false;
+				} catch (Exception e) {
+					System.out.println("Enter the date in the correct dd/mm/yyyy format");
+				}
 			}
-		}
-		System.out.println( "|-------------------------------------|" );
-		Student student = new Student( id, name, email, birthDate );
-		System.out.println( "Student Successfully Registered! " );
+		} while (isWrong);
+
+
+		// create new student object
+		Student student = new Student(id, name, email, birthDate);
+		System.out.println("Student Successfully Registered! ");
 		System.out.println(student);
 		return student;
+	}
+
+
+
+	static boolean checkDate(String date) {
+		String pattern = "(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/([0-9]{4})";
+		boolean flag = false;
+		if (date.matches(pattern)) {
+			flag = true;
+		}
+		return flag;
 	}
 
 }
