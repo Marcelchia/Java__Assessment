@@ -19,7 +19,8 @@ public class Main
     {
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
-			// Test data
+
+			// Insert test data
 
 			//New Student
 			Student student1 = new Student("1","Marcel","aaa@aaa.com","11/11/1111");

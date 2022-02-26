@@ -48,7 +48,7 @@ public class Student
 		//check the course code in the enrolledCourseGrade
 
 		enrolledCourseGrade.put(courseId, grade);
-		System.out.println("Print grade for:"  + courseId + " Grade: " + enrolledCourseGrade.get(courseId));
+
 	}
 
 

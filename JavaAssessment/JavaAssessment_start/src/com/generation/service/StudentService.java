@@ -26,30 +26,34 @@ public class StudentService
 			return null;
 		}
 
-	public void showSummary()
-	{
-		if(students.size()==0)
-		{
+	public void showSummary() {
+		if (students.size() == 0) {
 			System.out.println("No students yet, enroll some students");
-		}
-		else {  // show students
+		} else {  // show students
 			for (String i : students.keySet()) {
 				System.out.println(students.get(i));
 				//instance object of current student
 				Student currentStudent = students.get(i);
 				// get enrolled course hashmap
 				Map<String, Course> enrolledCourses = currentStudent.getEnrolledCourses();
+				Map<String, Double> enrolledCoursesGrade = currentStudent.enrolledCourseGrade;
 				if (enrolledCourses.size() == 0) {
 					System.out.println("No Enrolled Course yet, please enroll");
 				} else {
-					// print enrolled course
+					 //print enrolled course
+//					System.out.println("Enrolled Course");
+//					for (String j : enrolledCourses.keySet())
+//						System.out.println(enrolledCourses.get(j));
+//						for (String k : enrolledCoursesGrade.keySet())
+//						 System.out.println("Grade : " + enrolledCoursesGrade.get(k)) ;
 					System.out.println("Enrolled Course");
 					for (String j : enrolledCourses.keySet())
-						System.out.println(enrolledCourses.get(j));
+						System.out.println(enrolledCourses.get(j) +" Grade : " + enrolledCoursesGrade.get(j));
 					}
-				}		//end of student for loop
+				}    //end of student for loop
 			}  // end of else students
-		} // end of show summary method
+
+	}// end of show summary method
 
 
 
