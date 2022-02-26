@@ -1,5 +1,6 @@
 package com.generation.model;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,6 +15,8 @@ public class Student
 		public final Map<String,Course> enrolledCourse = new HashMap<>();
 		//key is the course ID, value is the grade
 		public final Map<String, Double> enrolledCourseGrade = new HashMap<>();
+		// key is the course ID, value is passed course object
+		public final Map<String,Course> passedCourse = new HashMap<>();
 
 
 		// constructor
@@ -52,7 +55,7 @@ public class Student
 	}
 
 
-    public void findPassedCourses()
+	public void findPassedCourses()
 		{
 			if(enrolledCourseGrade.size()==0)
 			{
@@ -63,11 +66,17 @@ public class Student
 				for (String courseId : enrolledCourseGrade.keySet()) {
 					double courseGrade = enrolledCourseGrade.get(courseId);
 					if (courseGrade >= PASS_MIN_GRADE) {
-						System.out.println("Course ID: " + courseId + ", Course Grade: " + courseGrade);
-					}
-				}
-			}
-		}
+						passedCourse.put(courseId,enrolledCourse.get(courseId));
+						}
+					} // end of for loop
+				for(String key : passedCourse.keySet()){
+					Course course = passedCourse.get(key);
+					System.out.println(course);
+				} // for loop to print
+			} // end of else
+		} // end of method
+
+
 
     public Course findCourseById( String courseId )
     {

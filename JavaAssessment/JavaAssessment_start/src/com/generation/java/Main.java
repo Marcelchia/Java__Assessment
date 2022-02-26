@@ -23,23 +23,22 @@ public class Main
 			// Insert test data
 
 			//New Student
-			Student student1 = new Student("1","Marcel","aaa@aaa.com","11/11/1111");
-			Student student2 = new Student("2","John","bbb@bbb.com","22/12/2222");
+			Student student1 = new Student("1","Marcel","marcel@gmail.com","11/11/1111");
+			Student student2 = new Student("2","John","john@gmail.com","22/12/2222");
 
-			Module moduleWebFundamentals  = new Module( "INTRO-CS", "Introduction to Computer Science",
+			Module module = new Module( "INTRO-CS", "Introduction to Computer Science",
 				"Introductory module for the generation technical programs" );
 
-			student1.enrollToCourse(new Course( "INTRO-WEB-1", "Introduction to Web Applications", 9, moduleWebFundamentals  ) );
-			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, moduleWebFundamentals  ) );
-			student1.enrollToCourse(new Course( "INTRO-CS-7", "Agile Software Development with SCRUM", 9, moduleWebFundamentals  ) );
+			student1.enrollToCourse(new Course(  "INTRO-CS-1", "Introduction to Computer Science", 9, module ) );
+			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
+			student1.enrollToCourse(new Course( "INTRO-CS-7", "Agile Software Development with SCRUM", 9, module )  );
 			student1.setGrade("INTRO-CS-1",3.5F);
-			student1.setGrade("INTRO-CS-2",1.5F);
-			student1.setGrade("INTRO-CS-7",4.5F);
+			student1.setGrade("INTRO-CS-7",5.5F);
 
 
-			student2.enrollToCourse(new Course( "INTRO-WEB-5", "Introduction to Algorithms", 9, moduleWebFundamentals  ) );
-			student2.enrollToCourse(new Course( "INTRO-CS-3", "Algorithm Design and Problem Solving - Introduction ", 9, moduleWebFundamentals  ) );
-			student2.setGrade("INTRO-CS-3",4.0F);
+			student2.enrollToCourse(new Course( "INTRO-CS-5", "Terminal Fundamentals", 9, module ) );
+			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module ) );
+			student2.setGrade("INTRO-CS-2",4.0F);
 
 
 			studentService.subscribeStudent(student1);
