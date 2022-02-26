@@ -14,6 +14,6 @@ Spent alot of time on the date error as well as initially input allowed invalid 
 
 Q)What would make your experience with this assessment better?
 
-Probably lesser spoonfeeding on the setup as i feel it may spoil the learning curve a little, since we usually learn more when we do more hands on learning.
+Probably lesser spoonfeeding on the setup as i feel it may spoil the learning curve a little, since we usually learn better when we do more hands on coding.
 I would have preferred to do option 1 and 6 on my own from stretch as well as to be tested a little more on inheritance and interface.
 
