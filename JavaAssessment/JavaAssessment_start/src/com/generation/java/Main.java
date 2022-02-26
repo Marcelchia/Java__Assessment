@@ -1,12 +1,14 @@
 package com.generation.java;
 
 import com.generation.model.Course;
+import com.generation.model.Module;
 import com.generation.model.Student;
 import com.generation.service.CourseService;
 import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -17,6 +19,32 @@ public class Main
     {
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
+			// Test data
+
+			//New Student
+			Student student1 = new Student("1","Marcel","aaa@aaa.com","11/11/1111");
+			Student student2 = new Student("2","John","bbb@bbb.com","22/12/2222");
+
+			Module moduleWebFundamentals  = new Module( "INTRO-CS", "Introduction to Computer Science",
+				"Introductory module for the generation technical programs" );
+
+			student1.enrollToCourse(new Course( "INTRO-WEB-1", "Introduction to Web Applications", 9, moduleWebFundamentals  ) );
+			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, moduleWebFundamentals  ) );
+			student1.enrollToCourse(new Course( "INTRO-CS-7", "Agile Software Development with SCRUM", 9, moduleWebFundamentals  ) );
+			student1.setGrade("INTRO-CS-1",3.5F);
+			student1.setGrade("INTRO-CS-2",1.5F);
+			student1.setGrade("INTRO-CS-7",4.5F);
+
+
+			student2.enrollToCourse(new Course( "INTRO-WEB-5", "Introduction to Algorithms", 9, moduleWebFundamentals  ) );
+			student2.enrollToCourse(new Course( "INTRO-CS-3", "Algorithm Design and Problem Solving - Introduction ", 9, moduleWebFundamentals  ) );
+			student2.setGrade("INTRO-CS-3",4.0F);
+
+
+			studentService.subscribeStudent(student1);
+			studentService.subscribeStudent(student2);
+			// End of Test Data
+
         Scanner scanner = new Scanner( System.in );
         int option;
         do
