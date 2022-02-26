@@ -8,7 +8,7 @@ This project is feasible and allows me to see the application to real working wo
 
 Q)What did you struggle with in this project?
 
-Did not really struggle with this assessment as much as compared to JS assessment, but did spent some time on Student Summary and Date Validation. I needed to change the data type attribute for date to validation the string pattern format of date properly. 
+This assessment is much easier compared to JS assessment, but did spent some time on Student Summary and Date Validation. I needed to change the data type attribute for date to validation the string pattern format of date properly. 
 
 
 Q)What would make your experience with this assessment better?
