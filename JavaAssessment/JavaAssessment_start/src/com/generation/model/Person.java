@@ -7,9 +7,9 @@ abstract public class Person
     private final String id;
     private final String name;
     private final String email;
-    private final Date birthDate;
+    private final String birthDate;
 
-    protected Person( String id, String name, String email, Date birthDate )
+    protected Person( String id, String name, String email, String birthDate )
     {
         this.id = id;
         this.name = name;
@@ -32,7 +32,7 @@ abstract public class Person
         return email;
     }
 
-    public Date getBirthDate()
+    public String getBirthDate()
     {
         return birthDate;
     }
