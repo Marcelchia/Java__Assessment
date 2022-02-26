@@ -59,12 +59,11 @@ public class Student
 				System.out.println("No course is graded yet");
 			}else {
 				// for loop for graded course
-				System.out.println("You have passed the following courses ");
+				System.out.println("You have passed the following courses : ");
 				for (String courseId : enrolledCourseGrade.keySet()) {
 					double courseGrade = enrolledCourseGrade.get(courseId);
 					if (courseGrade >= PASS_MIN_GRADE) {
-						System.out.println("Course ID: " + courseId);
-						System.out.println("Course Grade: " + courseGrade);
+						System.out.println("Course ID: " + courseId + "Course Grade: " + courseGrade);
 					}
 				}
 			}
