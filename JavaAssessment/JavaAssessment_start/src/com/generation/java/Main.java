@@ -163,7 +163,6 @@ public class Main
 			{
 				System.out.println("Student ID is not found ");
 			}else {
-				System.out.println("You have passed the following courses ");
 				student.findPassedCourses();
 			}
 		}
