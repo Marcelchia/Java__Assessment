@@ -7,12 +7,14 @@ public class Course
     private final int credits;
     private final Module module;
 
-    public Course( String code, String name, int credits, Module module )
+
+    public Course( String code, String name, int credits, Module module)
     {
         this.code = code;
         this.name = name;
         this.credits = credits;
         this.module = module;
+
     }
 
     public String getCode()
