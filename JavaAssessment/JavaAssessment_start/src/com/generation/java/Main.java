@@ -23,22 +23,23 @@ public class Main
 			// Insert test data
 
 			//New Student
-			Student student1 = new Student("1","Marcel","marcel@gmail.com","11/11/1111");
-			Student student2 = new Student("2","John","john@gmail.com","22/12/2222");
+			Student student1 = new Student("111","Marcel","marcel@gmail.com","11/11/1111");
+			Student student2 = new Student("222","John","john@gmail.com","22/12/2222");
 
 			Module module = new Module( "INTRO-CS", "Introduction to Computer Science",
 				"Introductory module for the generation technical programs" );
 
 			student1.enrollToCourse(new Course(  "INTRO-CS-1", "Introduction to Computer Science", 9, module ) );
 			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
-			student1.enrollToCourse(new Course( "INTRO-CS-7", "Agile Software Development with SCRUM", 9, module )  );
-			student1.setGrade("INTRO-CS-1",3.5F);
-			student1.setGrade("INTRO-CS-7",5.5F);
+
+			student1.setGrade("INTRO-CS-1",2.5F);
+			//student1.setGrade("INTRO-CS-2",5.5F);
 
 
-			student2.enrollToCourse(new Course( "INTRO-CS-5", "Terminal Fundamentals", 9, module ) );
-			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module ) );
-			student2.setGrade("INTRO-CS-2",4.0F);
+			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
+			student2.enrollToCourse(new Course( "INTRO-CS-3", "Algorithm Design and Problem Solving - Introduction ", 9, module ) );
+			student2.setGrade("INTRO-CS-2",3.0F);
+			//student2.setGrade("INTRO-CS-3",4.5F);
 
 
 			studentService.subscribeStudent(student1);
@@ -83,10 +84,10 @@ public class Main
 		{
 			System.out.println("Insert student ID");
 			String studentId = scanner.next();
-			Student student = studentService.findStudent(studentId);
 			//instantise StudentService (student) & retrieve specific student object with studentId
+			Student student = studentService.findStudent(studentId);
 			if (student == null) {      //student object doesn't exist
-				System.out.println("Invalid Student ID");
+				System.out.println("Student ID not found");
 				return;
 			}
 			System.out.println(student);
@@ -147,9 +148,14 @@ public class Main
 						System.out.println("Enter grade to the course: ");
 						double grade = scanner.nextDouble();
 
+						if(grade>=1 && grade<=6 ){
+
 						currentStudent.setGrade(courseId, grade);
 
 						System.out.println("grade inputted");
+						}
+						else{	System.out.println("grade out of range");
+						}
 					} else {
 						System.out.println("Course ID is not in your enrolled course");
 					}
@@ -171,7 +177,7 @@ public class Main
 			}
 			else
 			{
-				System.out.println( "Student with Id = " + studentId + " not found" );
+				System.out.println( "Student not found" );
 			}
 		}
 		//case 1

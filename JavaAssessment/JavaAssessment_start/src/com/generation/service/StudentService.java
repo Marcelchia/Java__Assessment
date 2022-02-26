@@ -34,22 +34,18 @@ public class StudentService
 				System.out.println(students.get(i));
 				//instance object of current student
 				Student currentStudent = students.get(i);
-				// get enrolled course hashmap
+				// Access enrolled course and enrolled course grade hashmap
 				Map<String, Course> enrolledCourses = currentStudent.getEnrolledCourses();
 				Map<String, Double> enrolledCoursesGrade = currentStudent.enrolledCourseGrade;
+				// if array is empty, no course print
 				if (enrolledCourses.size() == 0) {
 					System.out.println("No Enrolled Course yet, please enroll");
 				} else {
 					 //print enrolled course
-//					System.out.println("Enrolled Course");
-//					for (String j : enrolledCourses.keySet())
-//						System.out.println(enrolledCourses.get(j));
-//						for (String k : enrolledCoursesGrade.keySet())
-//						 System.out.println("Grade : " + enrolledCoursesGrade.get(k)) ;
 					System.out.println("Enrolled Course");
 					for (String j : enrolledCourses.keySet())
 						System.out.println(enrolledCourses.get(j) +" Grade : " + enrolledCoursesGrade.get(j));
-					}
+					}		// end of print enrolled course for loop
 				}    //end of student for loop
 			}  // end of else students
 

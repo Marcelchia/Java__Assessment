@@ -49,6 +49,7 @@ public class PrinterHelper
 			try {
 				System.out.println("Please enter date in dd/mm/yyyy format");
 				birthDate = sc.next();
+				// if date pattern is correct
 				if (checkDate(birthDate)) {
 					DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 					dateFormat.setLenient(false);
@@ -73,7 +74,7 @@ public class PrinterHelper
 	}
 
 
-
+	// check date pattern to eliminate invalid months/date keys
 	static boolean checkDate(String date) {
 		String pattern = "(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/([0-9]{4})";
 		boolean flag = false;

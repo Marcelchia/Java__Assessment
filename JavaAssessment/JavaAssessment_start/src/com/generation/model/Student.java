@@ -27,10 +27,9 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-
+			//add a default grade (0) into the enrolledCourseGrade HashMap
 			double grade = 0.0;
 			//add the course to the enrolledCourse Hashmap
-			//add a default grade (0) into the enrolledCourseGrade HashMap
 			enrolledCourse.put(course.getCode(), course);
 			enrolledCourseGrade.put(course.getCode(), grade);
     }
@@ -65,14 +64,16 @@ public class Student
 				System.out.println("You have passed the following courses : ");
 				for (String courseId : enrolledCourseGrade.keySet()) {
 					double courseGrade = enrolledCourseGrade.get(courseId);
+					// if above enrolled course is passed, add to passedCourse HashMap
 					if (courseGrade >= PASS_MIN_GRADE) {
 						passedCourse.put(courseId,enrolledCourse.get(courseId));
 						}
 					} // end of for loop
+						//for loop to print
 				for(String key : passedCourse.keySet()){
 					Course course = passedCourse.get(key);
 					System.out.println(course);
-				} // for loop to print
+				} // end of for loop
 			} // end of else
 		} // end of method
 
