@@ -63,7 +63,7 @@ public class Student
 				for (String courseId : enrolledCourseGrade.keySet()) {
 					double courseGrade = enrolledCourseGrade.get(courseId);
 					if (courseGrade >= PASS_MIN_GRADE) {
-						System.out.println("Course ID: " + courseId + "Course Grade: " + courseGrade);
+						System.out.println("Course ID: " + courseId + ", Course Grade: " + courseGrade);
 					}
 				}
 			}
