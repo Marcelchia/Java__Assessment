@@ -66,5 +66,5 @@ public class StudentService
 				Student currentStudent = students.get(studentId);
 				currentStudent.enrollToCourse( course );
 			}
-		}
+		}  // end of method
 } // end of class

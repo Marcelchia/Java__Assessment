@@ -80,8 +80,7 @@ public class Student
 
     public Course findCourseById( String courseId )
     {
-        //TODO
-       return null;
+			return enrolledCourse.get(courseId);
     }
 
     @Override
