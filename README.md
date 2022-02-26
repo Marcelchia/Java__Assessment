@@ -2,7 +2,7 @@
 
 Q)What did you like about this project?
 
-Good test of OO knowledge. It felt more like a learning experience than an assessment as I have gained a better understanding for OOP and Java in general. 
+A good test overall. It felt more like a learning experience than an assessment as I have gained a better understanding for OOP and Java in general. 
 This project is feasible and allows me to see the application to real working world coding. 
 
 
