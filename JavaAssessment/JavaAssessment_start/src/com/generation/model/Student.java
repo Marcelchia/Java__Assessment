@@ -60,8 +60,7 @@ public class Student
 			{
 				System.out.println("No course is graded yet");
 			}else {
-				// for loop for graded course
-
+				// for loop for course that has been graded
 				for (String courseId : enrolledCourseGrade.keySet()) {
 					double courseGrade = getGrade(courseId);
 					// if above enrolled course is passed, add to passedCourse HashMap
@@ -69,9 +68,10 @@ public class Student
 						passedCourse.put(courseId,findCourseById(courseId));
 						}
 					} // end of for loop
-				if(passedCourse.size()==0){System.out.println("You have not passed any course");}
-						//for loop to print
-				else {
+				if(passedCourse.size()==0){
+					System.out.println("You have not passed any course");
+				}
+				else { //for loop to print passed course
 					System.out.println("You have passed the following courses : ");
 					for (String key : passedCourse.keySet()) {
 						Course course = passedCourse.get(key);

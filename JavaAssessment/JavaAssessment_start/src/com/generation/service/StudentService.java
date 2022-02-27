@@ -41,7 +41,7 @@ public class StudentService
 				if (enrolledCourses.size() == 0) {
 					System.out.println("No Enrolled Course yet, please enroll");
 				} else {
-					 //print enrolled course
+					 //print enrolled course with corresponding grade
 					System.out.println("Enrolled Course");
 					for (String courseId : enrolledCourses.keySet())
 						System.out.println(enrolledCourses.get(courseId) +" Grade : " + enrolledCoursesGrade.get(courseId));
