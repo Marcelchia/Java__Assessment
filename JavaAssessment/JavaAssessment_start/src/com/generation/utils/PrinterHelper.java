@@ -74,7 +74,7 @@ public class PrinterHelper
 	}
 
 
-	// check date pattern to eliminate invalid months/date keys
+	// check date pattern to eliminate invalid months/date keys ie: 33/33/3333
 	static boolean checkDate(String date) {
 		String pattern = "(0?[1-9]|[12][0-9]|3[01])\\/(0?[1-9]|1[0-2])\\/([0-9]{4})";
 		boolean flag = false;

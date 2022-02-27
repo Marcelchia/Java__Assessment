@@ -63,10 +63,10 @@ public class Student
 				// for loop for graded course
 				System.out.println("You have passed the following courses : ");
 				for (String courseId : enrolledCourseGrade.keySet()) {
-					double courseGrade = enrolledCourseGrade.get(courseId);
+					double courseGrade = getGrade(courseId);
 					// if above enrolled course is passed, add to passedCourse HashMap
 					if (courseGrade >= PASS_MIN_GRADE) {
-						passedCourse.put(courseId,enrolledCourse.get(courseId));
+						passedCourse.put(courseId,findCourseById(courseId));
 						}
 					} // end of for loop
 						//for loop to print

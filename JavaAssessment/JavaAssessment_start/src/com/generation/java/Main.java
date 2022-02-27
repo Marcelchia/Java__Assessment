@@ -32,8 +32,8 @@ public class Main
 			student1.enrollToCourse(new Course(  "INTRO-CS-1", "Introduction to Computer Science", 9, module ) );
 			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
 
-			student1.setGrade("INTRO-CS-1",2.5F);
-			//student1.setGrade("INTRO-CS-2",5.5F);
+			student1.setGrade("INTRO-CS-1",3.5F);
+			student1.setGrade("INTRO-CS-2",5.5F);
 
 
 			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
