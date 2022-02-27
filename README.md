@@ -13,7 +13,8 @@ This assessment is much easier compared to JS assessment, but did spent some tim
 
 Q)What would make your experience with this assessment better?
 
-Probably lesser spoonfeeding on the setup as i feel it may spoil the learning curve a little, since we usually learn better when we do more hands on coding.
-I would have preferred to do option 1 and 6 on my own with minimal setups, ie: let us do the respective class and sub-class set up on our own as well not to give the toString method away. 
+While I am thankful that i am able to complete this project, I wished that there was lesser spoonfeeding on the setup as i feel it may spoil the learning curve a little, since we usually learn better when we do more hands on coding.I would have preferred to do option 1 and 6 on my own with minimal setups.
+
+ie: let us do the respective class and sub-class set up on our own as well not to give the toString method away or let us set up our own getter and setter.
 
 
