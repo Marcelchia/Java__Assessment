@@ -43,8 +43,8 @@ public class StudentService
 				} else {
 					 //print enrolled course
 					System.out.println("Enrolled Course");
-					for (String j : enrolledCourses.keySet())
-						System.out.println(enrolledCourses.get(j) +" Grade : " + enrolledCoursesGrade.get(j));
+					for (String courseId : enrolledCourses.keySet())
+						System.out.println(enrolledCourses.get(courseId) +" Grade : " + enrolledCoursesGrade.get(courseId));
 					}		// end of print enrolled course for loop
 				}    //end of student for loop
 			}  // end of else students
