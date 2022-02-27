@@ -23,27 +23,27 @@ public class Main
 			// Insert test data
 
 			//New Student
-			Student student1 = new Student("111","Marcel","marcel@gmail.com","11/11/1111");
-			Student student2 = new Student("222","John","john@gmail.com","22/12/2222");
-
-			Module module = new Module( "INTRO-CS", "Introduction to Computer Science",
-				"Introductory module for the generation technical programs" );
-
-			student1.enrollToCourse(new Course(  "INTRO-CS-1", "Introduction to Computer Science", 9, module ) );
-			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
-
-			student1.setGrade("INTRO-CS-1",3.5F);
-			student1.setGrade("INTRO-CS-2",5.5F);
-
-
-			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
-			student2.enrollToCourse(new Course( "INTRO-CS-3", "Algorithm Design and Problem Solving - Introduction ", 9, module ) );
-			student2.setGrade("INTRO-CS-2",3.0F);
+//			Student student1 = new Student("111","Marcel","marcel@gmail.com","11/11/1111");
+//			Student student2 = new Student("222","John","john@gmail.com","22/12/2222");
+//
+//			Module module = new Module( "INTRO-CS", "Introduction to Computer Science",
+//				"Introductory module for the generation technical programs" );
+//
+//			student1.enrollToCourse(new Course(  "INTRO-CS-1", "Introduction to Computer Science", 9, module ) );
+//			student1.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
+//
+//			student1.setGrade("INTRO-CS-1",2.5F);
+//			student1.setGrade("INTRO-CS-2",5.5F);
+//
+//
+//			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
+//			student2.enrollToCourse(new Course( "INTRO-CS-3", "Algorithm Design and Problem Solving - Introduction ", 9, module ) );
+//			student2.setGrade("INTRO-CS-2",3.0F);
 			//student2.setGrade("INTRO-CS-3",4.5F);
 
-
-			studentService.subscribeStudent(student1);
-			studentService.subscribeStudent(student2);
+//
+//			studentService.subscribeStudent(student1);
+//			studentService.subscribeStudent(student2);
 			// End of Test Data
 
         Scanner scanner = new Scanner( System.in );
@@ -154,7 +154,7 @@ public class Main
 
 						System.out.println("grade inputted");
 						}
-						else{	System.out.println("grade out of range");
+						else{	System.out.println("grade out of range, Input grade between 1-6");
 						}
 					} else {
 						System.out.println("Course ID is not in your enrolled course");
