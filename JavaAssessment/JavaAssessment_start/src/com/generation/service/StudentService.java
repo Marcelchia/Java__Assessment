@@ -30,10 +30,10 @@ public class StudentService
 		if (students.size() == 0) {
 			System.out.println("No students yet, enroll some students");
 		} else {  // show students
-			for (String i : students.keySet()) {
-				System.out.println(students.get(i));
+			for (String studentId : students.keySet()) {
+				System.out.println(students.get(studentId));
 				//instance object of current student
-				Student currentStudent = students.get(i);
+				Student currentStudent = students.get(studentId);
 				// Access enrolled course and enrolled course grade hashmap
 				Map<String, Course> enrolledCourses = currentStudent.getEnrolledCourses();
 				Map<String, Double> enrolledCoursesGrade = currentStudent.enrolledCourseGrade;
