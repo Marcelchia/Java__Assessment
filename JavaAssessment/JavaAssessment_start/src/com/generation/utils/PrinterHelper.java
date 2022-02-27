@@ -49,18 +49,19 @@ public class PrinterHelper
 			try {
 				System.out.println("Please enter date in dd/mm/yyyy format");
 				birthDate = sc.next();
-				// if date pattern is correct
-				if (checkDate(birthDate)) {
-					DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-					dateFormat.setLenient(false);
-					dateFormat.parse(birthDate);
-					isWrong = false;
+
+				DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+				dateFormat.parse(birthDate);
+				// if date pattern is not correct
+				if (!checkDate(birthDate)) {
+					System.out.println(" Date/Month keyed does not exist !! ");
 				} else {
-					System.out.println("Date does not exist !! ");
+					isWrong = false;
 				}
 			} //try
-			catch (Exception e) {
-					System.out.println("Date does not exist !!");
+			catch (ParseException e) {
+					System.out.println("Invalid date format. Make sure you type date using the following format: MM/dd/yyyy");
 				} //catch
 
 		} while (isWrong);
