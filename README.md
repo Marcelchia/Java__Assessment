@@ -7,7 +7,8 @@ A good test overall. It felt more like a learning experience than an assessment 
 
 Q)What did you struggle with in this project?
 
-This assessment is much easier compared to JS assessment, but did spent some time on Student Summary and Date Validation. I needed to change the data type attribute for date to validation the string pattern format of date properly. 
+This assessment is much easier compared to JS assessment, but did spent some time on Student Summary and Date Validation. 
+Took quite a while to validate the date formatting and date pattern error.
 Trying to refactor code as best as possible, somewhat feel code is abit messy.
 
 
