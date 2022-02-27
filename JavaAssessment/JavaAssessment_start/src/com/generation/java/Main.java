@@ -39,8 +39,8 @@ public class Main
 //			student2.enrollToCourse(new Course( "INTRO-CS-2", "Introduction to Algorithms", 9, module )  );
 //			student2.enrollToCourse(new Course( "INTRO-CS-3", "Algorithm Design and Problem Solving - Introduction ", 9, module ) );
 //			student2.setGrade("INTRO-CS-2",3.0F);
-			//student2.setGrade("INTRO-CS-3",4.5F);
-
+//			student2.setGrade("INTRO-CS-3",4.5F);
+//
 //
 //			studentService.subscribeStudent(student1);
 //			studentService.subscribeStudent(student2);
