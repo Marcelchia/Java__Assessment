@@ -135,8 +135,8 @@ public class Main
 				} else { // grade
 
 					//display course enrolled
-					for (String i : currentStudent.enrolledCourse.keySet()) {
-						System.out.println(currentStudent.enrolledCourse.get(i));
+					for (String courseId : currentStudent.enrolledCourse.keySet()) {
+						System.out.println(currentStudent.enrolledCourse.get(courseId));
 					}
 
 					//Get input from user to give you the Course ID
