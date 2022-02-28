@@ -14,6 +14,6 @@ Trying to refactor code as best as possible, somewhat feel code is abit messy.
 
 Q)What would make your experience with this assessment better?
 
-While I am thankful that i am able to complete this assessment, lesser spoonfeeding on the setups would be good. I would have preferred to tryout option 1 and 6 on my own with minimal setups. Could also let us do the respective class and sub-class set up on our own as well not to give the toString method away or let us set up our own getter and setter.
+While I am thankful for the additional time given so as to allow us revise more beforehand, lesser spoonfeeding on the setups would be good. I would have preferred to tryout option 1 and 6 on my own with minimal setups. Could also let us do the respective class and sub-class set up on our own as well not to give the toString method away or let us set up our own getter and setter.
 
 
